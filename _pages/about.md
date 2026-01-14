@@ -2,14 +2,21 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ph.D. Computer Science student @ UMass Amherst
+subtitle: 
+  <a href="mailto:seoyunjeong@umass.edu">
+    <i class="fas fa-envelope"></i> Email</a>&ensp;/&ensp;  
+  <a href="https://www.linkedin.com/in/seoyun-yuni-jeong/">
+    <i class="fab fa-linkedin"></i> LinkedIn</a>&ensp;/&ensp;
+  <a href="https://github.com/yunijeong5">
+    <i class="fab fa-github"></i> GitHub
+  </a>
 
 profile:
   align: left
   image: temp_profile_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <a href="mailto:seoyunjeong@umass.edu">Email</a> • <a href="https://www.linkedin.com/in/seoyun-yuni-jeong/">LinkedIn</a> • <a href="https://github.com/yunijeong5">GitHub</a>
+  # more_info: >
+  #   <a href="mailto:seoyunjeong@umass.edu">Email</a> • <a href="https://www.linkedin.com/in/seoyun-yuni-jeong/">LinkedIn</a> • <a href="https://github.com/yunijeong5">GitHub</a>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page

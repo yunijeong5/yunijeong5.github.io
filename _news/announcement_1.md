@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2020-09-01
+date: 2024-02-01
 inline: true
 related_posts: false
 ---
 
-Started 4+1 B.S. and M.S. in Computer Science and Math at UMass Amherst.
+Started MS in Computer Science at University of Massachusetts Amherst.
