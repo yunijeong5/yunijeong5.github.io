@@ -108,14 +108,44 @@ h1 {
   font-style: italic;
 }
 
-.contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* layout utilities: arrange components in a row (cluster) or column (stack) */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.contact-list li {
-  margin-bottom: 0.5rem;
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.contact-card .icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 footer {
