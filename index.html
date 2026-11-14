@@ -99,14 +99,40 @@
       <h2>Publications</h2>
       <ul class="pub-list">
         <li class="pub-item">
+          <p class="pub-title"><a href="https://arxiv.org/abs/2611.14380" target="_blank" rel="noopener">What Factors Matter for Collection-Level Counting with Human-AI Collaboration?</a></p>
+          <p class="pub-authors"><strong>Seoyun Jeong</strong>, Logan Lawrence, Owen L. Martin, Benjamin Koger, Daniel Sheldon, Subhransu Maji</p>
+          <p class="pub-venue">Under review</p>
+          <div class="cluster">
+            <a class="pub-link" href="https://arxiv.org/abs/2611.14380" target="_blank" rel="noopener">arXiv</a>
+            <button type="button" class="pub-link bibtex-toggle" aria-expanded="false">BibTeX</button>
+            <a class="pub-link" href="https://github.com/cvl-umass/collection-counting-benchmark" target="_blank" rel="noopener">Code</a>
+          </div>
+          <div class="bibtex-wrap"><pre class="bibtex"><code><span class="bt-type">@misc</span><span class="bt-brace">{</span><span class="bt-key">jeong2026factorsmattercollectionlevelcounting</span>,
+  <span class="bt-field">title</span>=<span class="bt-brace">{</span><span class="bt-value">What Factors Matter for Collection-Level Counting with Human-AI Collaboration?</span><span class="bt-brace">}</span>,
+  <span class="bt-field">author</span>=<span class="bt-brace">{</span><span class="bt-value">Seoyun Jeong and Logan Lawrence and Owen L. Martin and Benjamin Koger and Daniel Sheldon and Subhransu Maji</span><span class="bt-brace">}</span>,
+  <span class="bt-field">year</span>=<span class="bt-brace">{</span><span class="bt-value">2026</span><span class="bt-brace">}</span>,
+  <span class="bt-field">eprint</span>=<span class="bt-brace">{</span><span class="bt-value">2611.14380</span><span class="bt-brace">}</span>,
+  <span class="bt-field">archivePrefix</span>=<span class="bt-brace">{</span><span class="bt-value">arXiv</span><span class="bt-brace">}</span>,
+  <span class="bt-field">primaryClass</span>=<span class="bt-brace">{</span><span class="bt-value">cs.CV</span><span class="bt-brace">}</span>,
+  <span class="bt-field">url</span>=<span class="bt-brace">{</span><span class="bt-value">https://arxiv.org/abs/2611.14380</span><span class="bt-brace">}</span>
+<span class="bt-brace">}</span></code></pre></div>
+        </li>
+        <li class="pub-item">
           <p class="pub-title"><a href="https://arxiv.org/abs/2603.27033v1" target="_blank" rel="noopener">RealBirdID: Benchmarking Bird Species Identification in the Era of MLLMs</a></p>
           <p class="pub-authors">Logan Lawrence, Mustafa Chasmai, Rangel Daroya, Wuao Liu, <strong>Seoyun Jeong</strong>, Aaron Sun, Max Hamilton, Fabien Delattre, Oindrila Saha, Subhransu Maji, Grant Van Horn</p>
           <p class="pub-venue">CVPR 2026</p>
           <div class="cluster">
             <a class="pub-link" href="https://arxiv.org/abs/2603.27033v1" target="_blank" rel="noopener">arXiv</a>
+            <button type="button" class="pub-link bibtex-toggle" aria-expanded="false">BibTeX</button>
             <a class="pub-link" href="https://cvpr.thecvf.com/virtual/2026/poster/36931" target="_blank" rel="noopener">CVPR</a>
             <a class="pub-link" href="https://github.com/cvl-umass/RealBirdID" target="_blank" rel="noopener">Code</a>
           </div>
+          <div class="bibtex-wrap"><pre class="bibtex"><code><span class="bt-type">@inproceedings</span><span class="bt-brace">{</span><span class="bt-key">lawrence2026realbirdid</span>,
+  <span class="bt-field">title</span>=<span class="bt-brace">{</span><span class="bt-value">RealBirdID: Benchmarking Bird Species Identification in the Era of MLLMs</span><span class="bt-brace">}</span>,
+  <span class="bt-field">author</span>=<span class="bt-brace">{</span><span class="bt-value">Lawrence, Logan and Chasmai, Mustafa and Daroya, Rangel and Liu, Wuao and Jeong, Seoyun and Sun, Aaron and Hamilton, Max and Delattre, Fabien and Saha, Oindrila and Maji, Subhransu and others</span><span class="bt-brace">}</span>,
+  <span class="bt-field">booktitle</span>=<span class="bt-brace">{</span><span class="bt-value">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</span><span class="bt-brace">}</span>,
+  <span class="bt-field">year</span>=<span class="bt-brace">{</span><span class="bt-value">2026</span><span class="bt-brace">}</span>
+<span class="bt-brace">}</span></code></pre></div>
         </li>
       </ul>
     </section>
@@ -124,6 +150,16 @@
       var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
       document.documentElement.setAttribute("data-theme", next);
       localStorage.setItem("theme", next);
+    });
+  </script>
+  <script>
+    document.querySelectorAll(".bibtex-toggle").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var wrap = btn.closest(".pub-item").querySelector(".bibtex-wrap");
+        var open = !wrap.classList.contains("open");
+        wrap.classList.toggle("open", open);
+        btn.setAttribute("aria-expanded", open);
+      });
     });
   </script>
 

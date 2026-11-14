@@ -1,5 +1,5 @@
 :root {
-  --bg: #ffffff;
+  --bg: #fffdf9;
   --text: #222222;
   --muted: #666666;
   --accent: #6393e0;
@@ -271,6 +271,78 @@ h2 {
   border-color: var(--accent);
   color: var(--accent);
 }
+
+button.pub-link {
+  background: transparent;
+  cursor: pointer;
+  line-height: inherit;
+}
+
+.bibtex-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.bibtex-wrap.open {
+  grid-template-rows: 1fr;
+}
+
+.bibtex-wrap > .bibtex {
+  min-height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 0.9rem;
+  border-width: 0;
+  transition: padding 0.3s ease, margin 0.3s ease, border-width 0.3s ease;
+}
+
+.bibtex-wrap.open > .bibtex {
+  margin-top: 0.6rem;
+  padding: 0.7rem 0.9rem;
+  border-width: 1px;
+  overflow-x: auto;
+}
+
+.bibtex {
+  border: 0 solid var(--border);
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--text);
+  --bt-type: #8250df;
+  --bt-key: #c2410c;
+  --bt-field: #0b6bcb;
+  --bt-value: #1a7f37;
+  --bt-brace: #888888;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .bibtex {
+    --bt-type: #c297ff;
+    --bt-key: #ffa657;
+    --bt-field: #79c0ff;
+    --bt-value: #7ee787;
+    --bt-brace: #8b949e;
+  }
+}
+
+:root[data-theme="dark"] .bibtex {
+  --bt-type: #c297ff;
+  --bt-key: #ffa657;
+  --bt-field: #79c0ff;
+  --bt-value: #7ee787;
+  --bt-brace: #8b949e;
+}
+
+.bibtex code { font-family: inherit; }
+.bt-type { color: var(--bt-type); font-weight: 600; }
+.bt-key { color: var(--bt-key); }
+.bt-field { color: var(--bt-field); }
+.bt-value { color: var(--bt-value); }
+.bt-brace { color: var(--bt-brace); }
 
 footer {
   padding: 1.5rem 0;
