@@ -103,8 +103,35 @@ h2 {
 }
 
 .icon-link {
+  position: relative;
   color: var(--muted);
   line-height: 0;
+}
+
+.icon-link::after {
+  content: attr(aria-label);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translate(-50%, 4px);
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.70rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.icon-link:hover::after,
+.icon-link:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .icon-link:hover {

@@ -1,8 +1,6 @@
 # yunijeong5.github.io
 
-Personal homepage, served by GitHub Pages at [yunijeong5.github.io](https://yunijeong5.github.io).
-
-Plain static HTML/CSS, no build step, no dependencies.
+My personal homepage, served by GitHub Pages at [yunijeong5.github.io](https://yunijeong5.github.io).
 
 ## Structure
 
@@ -20,6 +18,15 @@ python3 -m http.server
 
 then visit `http://localhost:8000`.
 
+## Updating CV
+
+```zsh
+./scripts/update-cv.sh
+git add assets/doc/seoyun_yuni_jeong_cv.pdf
+git commit -m "Update CV"
+git push origin main
+```
+
 ## Deploying
 
-Just push to `main` — GitHub Pages serves the files as-is, no build step involved.
+Just push to `main`!
